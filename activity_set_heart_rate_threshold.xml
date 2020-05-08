@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <TextView
+        android:id="@+id/setHeartRateMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please set your heart rate threshold."
+        android:textColor="#f2eff2"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.186" />
+
+    <EditText
+        android:id="@+id/heartRateMin"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:background="@drawable/edit_round"
+        android:ems="10"
+        android:hint="Set minimum heart rate here."
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/heartRateMax"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setHeartRateMessage"
+        app:layout_constraintVertical_bias="0.494" />
+
+    <EditText
+        android:id="@+id/heartRateMax"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:background="@drawable/edit_round"
+        android:ems="10"
+        android:hint="Set maximum heart rate here."
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setHeartRateMessage"
+        app:layout_constraintVertical_bias="0.416" />
+
+    <Button
+        android:id="@+id/setHeartRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SET"
+        android:background="@drawable/button_round_register"
+        android:onClick="OnSetHR"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heartRateMax"
+        app:layout_constraintVertical_bias="0.378" />
+</androidx.constraintlayout.widget.ConstraintLayout>

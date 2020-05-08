@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".enterThreshold"
+    android:background="@drawable/gradient_background">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please choose which threshold to set."
+        android:textColor="#d2cfd2"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.22" />
+
+    <Button
+        android:id="@+id/heartRateButton"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:onClick="OnHeartRate"
+        android:text="Heart Rate"
+        android:textColor="#ff0049"
+        android:background="@drawable/button_round_heart"
+        app:layout_constraintBottom_toTopOf="@+id/oxygenRateButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.528" />
+
+    <Button
+        android:id="@+id/oxygenRateButton"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:onClick="OnOxygenRate"
+        android:text="Oxygen Rate"
+        android:textColor="#3335ff"
+        android:background="@drawable/button_round_oxygen"
+        app:layout_constraintBottom_toTopOf="@+id/motionRateButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.771" />
+
+    <Button
+        android:id="@+id/motionRateButton"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:text="Motion Rate"
+        android:textColor="#18b002"
+        android:onClick="OnMotionRate"
+        android:background="@drawable/button_round_motion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.705" />
+</androidx.constraintlayout.widget.ConstraintLayout>

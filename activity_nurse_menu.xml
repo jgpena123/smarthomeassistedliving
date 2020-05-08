@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NurseMenu"
+    android:background="@drawable/gradient_background">
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="406dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/createAppointmentButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/createAppointmentButton"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:onClick="OnCreateAppointment"
+        android:text="Create Appointment"
+        android:textAlignment="center"
+        android:background="@drawable/button_round_nurse_menu"
+        android:textColor="#d2cfd2"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.38" />
+
+    <Button
+        android:id="@+id/buttonLogOut"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="#F48FB1"
+        android:onClick="OnLogOut"
+        android:text="LOG OUT"
+        android:textColor="#F50057"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createAppointmentButton"
+        app:layout_constraintVertical_bias="0.546" />
+
+    <TextView
+        android:id="@+id/setThresholdsButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_round_nurse_menu"
+        android:onClick="OnSetThresholds"
+        android:text="Set Thresholds"
+        android:textAlignment="center"
+        android:textColor="#d2cfd2"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLogOut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createAppointmentButton"
+        app:layout_constraintVertical_bias="0.46" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
